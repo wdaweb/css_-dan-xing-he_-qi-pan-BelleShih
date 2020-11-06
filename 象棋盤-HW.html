@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
     <title>Document</title>
-    <style>
+<style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: '標楷體';            
+            box-sizing: border-box;
+        }
         body{
             width: 100vw;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: '標楷體';
         }
         .all{
             display: flex;
@@ -74,16 +80,17 @@
             background: black;
             transform: rotate(-45deg);
             position: absolute;
-            top: 10.6%;
+            align-self: flex-start;
+            margin-top: 1.5%;           
         }
         .line2{
             width: 1px;
             height: 225px;
             background: black;
-            transform: rotate(45deg);
-            
+            transform: rotate(45deg);            
             position: absolute;
-            top: 10.6%;
+            align-self: flex-start;
+            margin-top: 1.5%; 
         }
         .line3{
             width: 1px;
@@ -91,7 +98,8 @@
             background: black;
             transform: rotate(-45deg);
             position: absolute;
-            top: 69.5%;
+            align-self: flex-end;
+            margin-bottom: 1.5%; 
         }
         .line4{
             width: 1px;
@@ -99,7 +107,8 @@
             background: black;
             transform: rotate(45deg);
             position: absolute;
-            top: 69.5%;
+            align-self: flex-end;
+            margin-bottom: 1.5%; 
         }
         .river{
             height: 80px;
@@ -112,13 +121,16 @@
             align-items: center;
         }
         .black{
-            float: left;
-            position: absolute;
-            top: 10%;
+            height: 320px;            
             font-size: 2.5rem;
+            position: absolute;
             display: flex;
-            justify-content: center;
+            align-self: flex-start;           
+            justify-content: space-around;
+            align-items: center;
             flex-wrap: wrap;
+            flex-direction: column;
+            margin-top: 1%;
         }
         .b1{
             width: 690px;
@@ -127,17 +139,17 @@
         }
         .b2{
             width: 530px;
+            align-content: flex-end;
             display: flex;
             justify-content: space-between;
-            position: absolute;
-            top: 300%;
+            padding-top: 11%;            
         }
         .b3{
             width: 690px;
             display: flex;
             justify-content: space-between;
-            position: absolute;
-            top: 450%;
+            justify-self: flex-start;
+            
         }
         .b{
             display: flex;
@@ -149,35 +161,39 @@
             background: white;
             border-radius: 50%; 
         }
-        .red{
-            float: left;
-            
+        .red{           
+            height: 310px;            
             font-size: 2.5rem;
+            position: absolute;
             display: flex;
-            justify-content: center;
+            align-self: flex-end;           
+            justify-content: space-between;
+            align-items: center;
             flex-wrap: wrap;
+            flex-direction: column-reverse;
             color: red;
+            margin-bottom: 2%;
+           
         }
         .r1{
             width: 690px;
             display: flex;
             justify-content: space-between;
-            position: absolute;
-            top: 88%;
+            
         }
         .r2{
             width: 530px;
             display: flex;
-            justify-content: space-between;
-            position: absolute;
-            top: 71%;
+            justify-content: space-between;  
+            margin-bottom: 11%;          
+            
         }
         .r3{
             width: 690px;
             display: flex;
             justify-content: space-between;
-            position: absolute;
-            top: 62%;
+            padding-top: 3%;
+            
         }
         .r{
             display: flex;
@@ -195,9 +211,7 @@
     <div class="all">
         <div class="left">棋盤裡，車無輪，馬無韁，叫聲將軍提防提防</div>
         <div class="container">
-            <div class="container-s">
-                <div class="line"></div>
-                <div class="line2"></div>
+            <div class="container-s">                
                 <table>
                     <tr>
                         <td></td>
@@ -243,9 +257,7 @@
                 <div class="river">
                     <div class="true">楚河</div>
                     <div class="han">漢界</div>
-                </div>
-                <div class="line3"></div>
-                <div class="line4"></div>
+                </div>               
                 <table>
                     <tr>
                         <td></td>
@@ -287,56 +299,60 @@
                         <td></td>
                         <td></td>
                     </tr>
-                </table>
-                <div class="black">
-                    <div class="b1">
-                        <div class="b">車</div>
-                        <div class="b">馬</div>
-                        <div class="b">象</div>
-                        <div class="b">士</div>
-                        <div class="b">將</div>
-                        <div class="b">士</div>
-                        <div class="b">象</div>
-                        <div class="b">馬</div>
-                        <div class="b">車</div>
-                    </div>
-                    <div class="b2">
-                        <div class="b">包</div>
-                        <div class="b">包</div>
-                    </div>
-                    <div class="b3">
-                        <div class="b">卒</div>
-                        <div class="b">卒</div>
-                        <div class="b">卒</div>
-                        <div class="b">卒</div>
-                        <div class="b">卒</div>
-                        
-                    </div>
+                </table>                
+            </div>
+            <div class="line"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            <div class="line4"></div>
+            <div class="black">
+                <div class="b1">
+                    <div class="b">車</div>
+                    <div class="b">馬</div>
+                    <div class="b">象</div>
+                    <div class="b">士</div>
+                    <div class="b">將</div>
+                    <div class="b">士</div>
+                    <div class="b">象</div>
+                    <div class="b">馬</div>
+                    <div class="b">車</div>
                 </div>
-                <div class="red">
-                    <div class="r1">
-                        <div class="r">俥</div>
-                        <div class="r">傌</div>
-                        <div class="r">相</div>
-                        <div class="r">仕</div>
-                        <div class="r">帥</div>
-                        <div class="r">仕</div>
-                        <div class="r">相</div>
-                        <div class="r">傌</div>
-                        <div class="r">俥</div>
-                    </div>
-                    <div class="r2">
-                        <div class="r">炮</div>
-                        <div class="r">炮</div>
-                    </div>
-                    <div class="r3">
-                        <div class="r">兵</div>
-                        <div class="r">兵</div>
-                        <div class="r">兵</div>
-                        <div class="r">兵</div>
-                        <div class="r">兵</div>
-                        
-                    </div>
+                <div class="b2">
+                    <div class="b">包</div>
+                    <div class="b">包</div>
+                </div>
+                <div class="b3">
+                    <div class="b">卒</div>
+                    <div class="b">卒</div>
+                    <div class="b">卒</div>
+                    <div class="b">卒</div>
+                    <div class="b">卒</div>
+                    
+                </div>
+            </div>
+            <div class="red">
+                <div class="r1">
+                    <div class="r">俥</div>
+                    <div class="r">傌</div>
+                    <div class="r">相</div>
+                    <div class="r">仕</div>
+                    <div class="r">帥</div>
+                    <div class="r">仕</div>
+                    <div class="r">相</div>
+                    <div class="r">傌</div>
+                    <div class="r">俥</div>
+                </div>
+                <div class="r2">
+                    <div class="r">炮</div>
+                    <div class="r">炮</div>
+                </div>
+                <div class="r3">
+                    <div class="r">兵</div>
+                    <div class="r">兵</div>
+                    <div class="r">兵</div>
+                    <div class="r">兵</div>
+                    <div class="r">兵</div>
+                    
                 </div>
             </div>
         </div>
